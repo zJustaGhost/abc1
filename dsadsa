@@ -1,0 +1,90 @@
+package com.basic.bai3;
+
+import com.basic.bai3.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class MainScreen {
+
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		/*System.out.println("Nhập số lượng Student: ");
+		int N = in.nextInt();
+		in.nextLine();*/
+		
+		ArrayList<Student> listStudent = new ArrayList<Student>();
+		int i = 1;
+		while (i <= 1000) {
+			System.out.println("Nhập thông tin học sinh thứ " + i);
+			System.out.println("Nhập họ và tên: ");
+			String fullName = in.nextLine();
+			System.out.println("Nhập địa chỉ: ");
+			String address = in.nextLine();
+			System.out.println("Nhập ngày tháng năm sinh: ");
+			String dob = in.nextLine();
+			System.out.println("Nhập giới tính: ");
+			String gender = in.nextLine();
+			System.out.println("Nhập điểm tổng kết: ");
+			float finalGrade = in.nextFloat();
+			in.nextLine();
+			
+			Student Student1 = new Student(fullName, address, dob, gender, finalGrade);
+			listStudent.add(Student1);
+			System.out.println("Do you want to continue (Y/N)?");
+			String answer = in.nextLine();
+			if (answer.equals("N")) {
+				System.out.println("Dừng nhập thông tin");
+				break;
+			} 
+			else {};
+			i++;
+		}
+			for (Student student : listStudent) {
+				System.out.println(student.ThongTinStudent());
+			}
+			
+			for (int j = 0; j < listStudent.size(); j++) {
+				if (listStudent.get(j).getfinalGrade() < 4) 
+				{
+					System.out.println("Học sinh " + listStudent.get(j).getfullName() + " có học lực kém");
+				}
+				else if (listStudent.get(j).getfinalGrade() < 5 && listStudent.get(j).getfinalGrade() >= 4)
+				{
+					System.out.println("Học sinh " + listStudent.get(j).getfullName() + " có học lực yếu");
+				}
+				else if (listStudent.get(j).getfinalGrade() < 5.5 && listStudent.get(j).getfinalGrade() >= 5) 
+				{
+					System.out.println("Học sinh " + listStudent.get(j).getfullName() + " có học lực trung bình yếu");
+				}
+				else if (listStudent.get(j).getfinalGrade() < 6.5 && listStudent.get(j).getfinalGrade() >= 5.5) 
+				{
+					System.out.println("Học sinh " + listStudent.get(j).getfullName() + " có học lực trung bình");
+				}
+				else if (listStudent.get(j).getfinalGrade() < 7 && listStudent.get(j).getfinalGrade() >= 6.5) 
+				{
+					System.out.println("Học sinh " + listStudent.get(j).getfullName() + " có học lực trung bình khá");
+				}
+				else if (listStudent.get(j).getfinalGrade() < 8  && listStudent.get(j).getfinalGrade() >= 7) 
+				{
+					System.out.println("Học sinh " + listStudent.get(j).getfullName() + " có học lực khá");
+				}
+				else if (listStudent.get(j).getfinalGrade() < 8.5  && listStudent.get(j).getfinalGrade() >= 8) 
+				{
+					System.out.println("Học sinh " + listStudent.get(j).getfullName() + " có học lực khá giỏi");
+				}
+				else if (listStudent.get(j).getfinalGrade() <= 10  && listStudent.get(j).getfinalGrade() >= 8.5) 
+				{
+					System.out.println("Học sinh " + listStudent.get(j).getfullName() + " có học lực giỏi");
+				}
+			}
+			float t = 0;
+			for (int k = 0; k < listStudent.size(); k++) {
+				t = listStudent.get(k).getfinalGrade() + t;
+			}
+			System.out.println(t);
+			System.out.println("Điểm tổng kết trung bình của danh sách học sinh là: ");
+			System.out.println(t/listStudent.size());
+	}
+
+}
