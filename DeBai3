@@ -1,0 +1,40 @@
+Bài 3
+Trong package “com.basic.bai3”
+•	Tạo một class có tên: Student với các thuộc tính 
+	fullName (kiểu String)
+	address (kiểu String)
+	dob (kiểu String dạng dd/mm/yyyy)
+	gender  (kiểu String)
+	finalGrade (kiểu float) - điểm tổng kết
+•	Tạo các phương thức set, get cho các thuộc tính trên
+•	Tạo một class có tên MainScreen có chứa hàm main. Trong hàm main viết chương trình sau:
+a. Sử dụng vòng lặp WHILE hoặc DO…WHILE để nhập thông tin Student từ bàn phím.  
+Sau mỗi lần nhập đầy đủ thông tin của một Student thì tiếp tục  in ra thông báo: “Do you want to continue (Y/N)?”. 
+-  Nếu người dùng nhập Y thì chương trình tiếp tục cho nhập Student tiếp theo, 
+- Nếu người dùng nhập N thì dừng nhập Student.  
+Sử dụng mảng ArrayList để tạo danh sách lưu các Student vừa nhập
+b. In ra tất cả Student trong danh sách theo định dạng:
+Student 1:
+	FullName:…
+	Address: …
+	DOB: …
+	Gender: …
+	FinalGrade: …
+Student 2:
+	FullName:…
+	Address: …
+	DOB: …
+	Gender: …
+	FinalGrade: …
+Student N ………………………..
+c. Sử dụng vòng lặp FOR để in ra danh sách vừa nhập. Xét finalGrade:
+	Nếu: finalGrade < 4.0 thì in ra  Học sinh  <fullName> học lực kém
+	Nếu  4.0 <= finalGrade < 5.0 thì in ra  Học sinh  <fullName> học lực yếu
+	Nếu  5.0 <= finalGrade< 5.5  thì in ra  Học sinh  <fullName> học lực  trung bình  yếu.
+	Nếu  5.5 <= finalGrade < 6.5 thì in ra  Học sinh  <fullName> học lực trung bình
+	Nếu  6.5 <= finalGrade < 7.0  thì in ra  Học sinh  <fullName> học lực trung bình khá
+	Nếu  7.0 <= finalGrade < 8.0   thì in ra  Học sinh  <fullName> học lực khá
+	Nếu  8.0 <= finalGrade < 8.5  thì in ra  Học sinh  <fullName> học lực khá giỏi
+	Nếu  8.5 <= finalGrade <= 10.0  thì in ra  Học sinh  <fullName> học lực giỏi
+d. Tính điểm tổng kết trung bình của danh sách học sinh  (tổng điểm /số lượng)
+
