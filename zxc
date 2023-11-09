@@ -1,0 +1,67 @@
+package com.basic.bai3;
+
+class Student {
+
+	private String fullName;
+	private String address;
+	private String dob;
+	private String gender;
+	private float finalGrade;
+	
+	public Student (String fullName, String address, String dob, String gender, float finalGrade) {
+		super();
+		this.fullName = fullName;
+		this.address = address;
+		this.dob = dob;
+		this.gender = gender;
+		this.finalGrade = finalGrade;
+	}
+	
+	public String getfullName() {
+		return fullName;
+	}
+	public void setfullName(String fullName) {
+		this.fullName = fullName;
+	}
+	public String getaddress() {
+		return address;
+	}
+	public void setaddress(String address) {
+		this.address = address;
+	}
+	public String getdob() {
+		return dob;
+	}
+	public void setdob(String dob) {
+		this.dob = dob;
+	}
+	public String getgender() {
+		return gender;
+	}
+	public void setgender(String gender) {
+		this.gender = gender;
+	}
+	public float getfinalGrade() {
+		return finalGrade;
+	}
+	public void setfinalGrade(float finalGrade) {
+		this.finalGrade = finalGrade;
+	}
+	
+	public String ThongTinStudent () {
+		System.out.println("Thông tin Student như sau: ");
+		System.out.println("- FullName: " + fullName);
+		System.out.println("- Address: " + address);
+		System.out.println("- DOB: " + dob);
+		System.out.println("- Gender: " + gender);
+		System.out.println("- FinalGrade: " + finalGrade);
+		return "";
+		
+	}
+}
+	
+	
+	
+
+
+
